@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Achados e Perdidos - Escola</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Achados & Perdidos</h1>
+    <p>Painel de itens encontrados na escola</p>
+  </header>
+
+  <main class="container">
+    <!-- Formulario para cadastrar novo item -->
+    <section class="form-section">
+      <h2>Cadastrar Item Encontrado</h2>
+      <form id="item-form">
+        <div class="input-group">
+          <label for="title">Nome do Objeto</label>
+          <input type="text" id="title" placeholder="Ex: Casaco Azul, Garrafa Térmica" required>
+        </div>
+
+        <div class="input-group">
+          <label for="category">Categoria</label>
+          <select id="category" required>
+            <option value="">Selecione...</option>
+            <option value="Roupas">Roupas</option>
+            <option value="Material Escolar">Material Escolar</option>
+            <option value="Eletrônicos">Eletrônicos</option>
+            <option value="Outros">Outros</option>
+          </select>
+        </div>
+
+        <div class="input-group">
+          <label for="location">Onde foi achado?</label>
+          <input type="text" id="location" placeholder="Ex: Pátio, Quadra, Sala 12" required>
+        </div>
+
+        <div class="input-group">
+          <label for="image-url">URL da Imagem (Opcional)</label>
+          <input type="url" id="image-url" placeholder="https://exemplo.com/imagem.jpg">
+        </div>
+
+        <button type="submit" class="btn-submit">Cadastrar Item</button>
+      </form>
+    </section>
+
+    <!-- Lista de itens cadastrados -->
+    <section class="list-section">
+      <h2>Itens Cadastrados</h2>
+      <div id="items-grid" class="grid">
+        <!-- Os cards serao inseridos via JS aqui -->
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
